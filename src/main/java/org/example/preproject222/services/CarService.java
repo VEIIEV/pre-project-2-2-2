@@ -18,7 +18,7 @@ public class CarService {
     }
 
 
-    public List<Car> getSpecifiedCarsAmount(Integer amount, String[] sortBy) {
+    public List<Car> getSpecifiedCarsAmount(Integer amount, List<String> sortBy) {
         return carDao.getSpecifiedCarAmount(amount, sortBy);
     }
 }

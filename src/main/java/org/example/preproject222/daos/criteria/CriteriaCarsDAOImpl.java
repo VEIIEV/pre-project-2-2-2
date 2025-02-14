@@ -30,7 +30,7 @@ public class CriteriaCarsDAOImpl implements CriteriaCarsDAO {
     }
 
     @Override
-    public List<Car> getSpecifiedCarAmount(Integer amount, String[] sortBy) {
+    public List<Car> getSpecifiedCarAmount(Integer amount, List<String> sortBy) {
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Car> criteriaQuery = criteriaBuilder.createQuery(Car.class);
         Root<Car> root = criteriaQuery.from(Car.class);

@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface CriteriaCarsDAO {
 
-    List<Car> getSpecifiedCarAmount(Integer amount, String[] sortBy);
+    List<Car> getSpecifiedCarAmount(Integer amount, List<String> sortBy);
 
 }
