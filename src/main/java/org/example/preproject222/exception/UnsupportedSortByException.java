@@ -1,4 +1,4 @@
-package org.example.preproject222.exceptions;
+package org.example.preproject222.exception;
 
 import java.util.ArrayList;
 import java.util.List;

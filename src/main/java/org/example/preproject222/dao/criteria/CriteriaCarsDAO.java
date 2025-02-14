@@ -1,6 +1,6 @@
-package org.example.preproject222.daos.criteria;
+package org.example.preproject222.dao.criteria;
 
-import org.example.preproject222.entities.Car;
+import org.example.preproject222.entitie.Car;
 
 
 import java.util.List;

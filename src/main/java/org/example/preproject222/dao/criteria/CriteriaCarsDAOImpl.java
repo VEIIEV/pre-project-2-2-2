@@ -1,4 +1,4 @@
-package org.example.preproject222.daos.criteria;
+package org.example.preproject222.dao.criteria;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -7,13 +7,12 @@ import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Order;
 import jakarta.persistence.criteria.Root;
-import org.example.preproject222.entities.Car;
+import org.example.preproject222.entitie.Car;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 
 
 @Repository

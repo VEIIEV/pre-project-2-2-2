@@ -1,7 +1,6 @@
-package org.example.preproject222.entities;
+package org.example.preproject222.entitie;
 
 import jakarta.persistence.*;
-import lombok.*;
 import org.hibernate.proxy.HibernateProxy;
 
 import java.util.Objects;

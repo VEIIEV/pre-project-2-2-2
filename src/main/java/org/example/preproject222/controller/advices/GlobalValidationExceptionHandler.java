@@ -1,7 +1,7 @@
-package org.example.preproject222.controllers.advices;
+package org.example.preproject222.controller.advices;
 
 
-import org.example.preproject222.exceptions.UnsupportedSortByException;
+import org.example.preproject222.exception.UnsupportedSortByException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
