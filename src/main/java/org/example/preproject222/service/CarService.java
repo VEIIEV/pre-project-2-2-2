@@ -25,7 +25,9 @@ public class CarService {
 
 
     public List<Car> getSpecifiedCarsAmount(Integer amount, List<String> sortBy) {
-        (validateSortBy(sortBy);
+        if (sortBy != null) {
+            validateSortBy(sortBy);
+        }
 
         return carDao.getSpecifiedCarAmount(amount, sortBy);
     }
