@@ -1,7 +1,7 @@
-package org.services;
+package org.example.preproject222.services;
 
-import org.daos.CarDao;
-import org.entities.Car;
+import org.example.preproject222.daos.CarDao;
+import org.example.preproject222.entities.Car;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +18,7 @@ public class CarService {
     }
 
 
-    public List<Car> getSpecifiedCarsAmount(int n) {
-        return carDao.find
+    public List<Car> getSpecifiedCarsAmount(Integer amount, String[] sortBy) {
+        return carDao.getSpecifiedCarAmount(amount, sortBy);
     }
 }

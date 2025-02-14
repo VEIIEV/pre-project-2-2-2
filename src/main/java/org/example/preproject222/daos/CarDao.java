@@ -1,13 +1,10 @@
-package org.daos;
+package org.example.preproject222.daos;
 
-import org.daos.criteria.CriteriaCarsDAO;
-import org.entities.Car;
-import org.hibernate.annotations.processing.HQL;
-import org.springframework.data.jpa.repository.Query;
+import org.example.preproject222.daos.criteria.CriteriaCarsDAO;
+import org.example.preproject222.entities.Car;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 import java.util.UUID;
 
 @Repository

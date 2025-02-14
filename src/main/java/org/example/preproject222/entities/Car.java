@@ -1,4 +1,4 @@
-package org.entities;
+package org.example.preproject222.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -7,9 +7,6 @@ import org.hibernate.proxy.HibernateProxy;
 import java.util.Objects;
 
 
-@Getter
-@Setter
-@ToString
 @Entity
 @Table(name = "cars")
 public class Car {
@@ -34,6 +31,29 @@ public class Car {
         this.series = series;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getSeries() {
+        return series;
+    }
+
+    public void setSeries(int series) {
+        this.series = series;
+    }
 
     @Override
     public String toString() {
@@ -51,7 +71,7 @@ public class Car {
         Class<?> thisEffectiveClass = this instanceof HibernateProxy ? ((HibernateProxy) this).getHibernateLazyInitializer().getPersistentClass() : this.getClass();
         if (thisEffectiveClass != oEffectiveClass) return false;
         Car car = (Car) object;
-        return getId() != null && Objects.equals(getId(), car.getId());
+        return this.getId() != null && Objects.equals(this.getId(), car.getId());
     }
 
     @Override
