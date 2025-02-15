@@ -14,10 +14,4 @@ public class PreProject222Application {
         springApplication.setBannerMode(Banner.Mode.OFF);
         ConfigurableApplicationContext context = springApplication.run(args);
     }
-
-    public static class ServletInitializer extends SpringBootServletInitializer {
-
-
-
-    }
 }
