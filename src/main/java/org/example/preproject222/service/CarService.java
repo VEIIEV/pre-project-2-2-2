@@ -5,7 +5,6 @@ import org.example.preproject222.dao.CarDao;
 import org.example.preproject222.entity.Car;
 import org.example.preproject222.exception.UnsupportedSortByException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -14,7 +13,7 @@ import java.util.List;
 @Service
 public class CarService {
 
-    private CarDao carDao;
+    private final CarDao carDao;
 
 
     private final CarProperties carProperties;
@@ -30,7 +29,7 @@ public class CarService {
         if (sortBy != null) {
             validateSortBy(sortBy);
         }
-        if (amount != null && amount > carProperties.getLimiter().getMaxValue()) {
+        if (amount != null && amount >= carProperties.getLimiter().getMaxValue()) {
             amount = null;
         }
 

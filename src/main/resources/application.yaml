@@ -28,6 +28,7 @@ spring:
     suffix: .html
 
 cars:
-  max-car: 2
+  limiter:
+    max-value: 2
   sort:
     allowed: model

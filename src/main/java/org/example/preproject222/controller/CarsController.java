@@ -18,8 +18,6 @@ public class CarsController {
 
     private final CarService carService;
 
-
-
     @Autowired
     public CarsController(CarService carService) {
         this.carService = carService;
@@ -34,9 +32,6 @@ public class CarsController {
 
         return "car";
     }
-
-
-
 
 
 }
