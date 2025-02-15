@@ -14,8 +14,6 @@ import java.util.List;
 public class CarService {
 
     private final CarDao carDao;
-
-
     private final CarProperties carProperties;
 
     @Autowired

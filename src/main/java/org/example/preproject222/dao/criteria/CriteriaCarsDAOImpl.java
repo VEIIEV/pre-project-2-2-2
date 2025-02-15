@@ -18,12 +18,8 @@ import java.util.List;
 public class CriteriaCarsDAOImpl implements CriteriaCarsDAO {
 
 
-
     @PersistenceContext
     private EntityManager entityManager;
-
-    public CriteriaCarsDAOImpl() {
-    }
 
     @Override
     public List<Car> getSpecifiedCarAmount(Integer amount, List<String> sortBy) {

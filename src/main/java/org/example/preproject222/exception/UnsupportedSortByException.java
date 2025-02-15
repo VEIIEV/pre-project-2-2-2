@@ -1,10 +1,13 @@
 package org.example.preproject222.exception;
 
+import lombok.Getter;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
 //хотел сначала наследоваться от BindException но чёт не разобрался как им пользоваться
+@Getter
 public class UnsupportedSortByException extends RuntimeException {
 
     private final List<String> usedSortBy = new ArrayList<>();
@@ -22,7 +25,4 @@ public class UnsupportedSortByException extends RuntimeException {
         usedSortBy.add(sortBy);
     }
 
-    public List<String> getUsedSortBy() {
-        return usedSortBy;
-    }
 }
