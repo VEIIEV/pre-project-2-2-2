@@ -23,7 +23,7 @@ public class User {
     private String email;
 
     @Column(name = "revenue")
-    private long revenue;
+    private long revenue = 0;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "car_id", referencedColumnName = "car_id")

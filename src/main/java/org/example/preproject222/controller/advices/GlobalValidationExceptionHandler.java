@@ -1,6 +1,7 @@
 package org.example.preproject222.controller.advices;
 
 
+import jakarta.persistence.EntityNotFoundException;
 import org.example.preproject222.config.CarProperties;
 import org.example.preproject222.exception.UnsupportedSortByException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,13 @@ public class GlobalValidationExceptionHandler extends DefaultHandlerExceptionRes
                 "\n Allowed Sort list: " +
                 String.join(", ", carProperties.getSort().getAllowed());
 
+        return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(EntityNotFoundException.class)
+    public ResponseEntity<String> handleValidationExceptions(EntityNotFoundException ex) {
+
+        String errors = ex.getMessage();
         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
     }
 
