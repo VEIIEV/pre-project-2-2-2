@@ -7,7 +7,7 @@ import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Order;
 import jakarta.persistence.criteria.Root;
-import org.example.preproject222.entitie.Car;
+import org.example.preproject222.entity.Car;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
@@ -19,8 +19,6 @@ import java.util.List;
 public class CriteriaCarsDAOImpl implements CriteriaCarsDAO {
 
 
-    @Value("${cars.max-car}")
-    private Integer maxAmount;
 
     @PersistenceContext
     private EntityManager entityManager;
@@ -46,7 +44,7 @@ public class CriteriaCarsDAOImpl implements CriteriaCarsDAO {
 
 
         TypedQuery<Car> query = entityManager.createQuery(criteriaQuery);
-        if (amount != null && amount < maxAmount) {
+        if (amount != null) {
             query.setMaxResults(amount);
         }
         return query.getResultList();

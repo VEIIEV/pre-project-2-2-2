@@ -1,7 +1,7 @@
 package org.example.preproject222.dao;
 
 import org.example.preproject222.dao.criteria.CriteriaCarsDAO;
-import org.example.preproject222.entitie.Car;
+import org.example.preproject222.entity.Car;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

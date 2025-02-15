@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Configuration
-@PropertySource("classpath:application.properties")
+@PropertySource("classpath:application.yaml")
 public class AppConfig {
 
 

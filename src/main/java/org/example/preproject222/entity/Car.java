@@ -1,4 +1,4 @@
-package org.example.preproject222.entitie;
+package org.example.preproject222.entity;
 
 import jakarta.persistence.*;
 import org.hibernate.proxy.HibernateProxy;
