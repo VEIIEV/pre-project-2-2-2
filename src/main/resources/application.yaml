@@ -21,7 +21,7 @@ spring:
           min_size: 5
           max_size: 20
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
 
   thymeleaf:
     prefix: classpath:/templates/
@@ -32,3 +32,7 @@ cars:
     max-value: 2
   sort:
     allowed: model
+
+loan:
+  min-revenue: 40000
+  min-car-value: 1000000

@@ -21,13 +21,19 @@ public class Car {
     @Column(name = "series")
     private int series;
 
+    @Column(name = "cost")
+    private int cost;
+
+    @OneToOne(mappedBy = "car")
+    User user;
 
     public Car() {
     }
 
-    public Car(String model, int series) {
+    public Car(String model, int series, int cost) {
         this.model = model;
         this.series = series;
+        this.cost = cost;
     }
 
     public Long getId() {
@@ -76,5 +82,13 @@ public class Car {
     @Override
     public final int hashCode() {
         return this instanceof HibernateProxy ? ((HibernateProxy) this).getHibernateLazyInitializer().getPersistentClass().hashCode() : getClass().hashCode();
+    }
+
+    public int getCost() {
+        return cost;
+    }
+
+    public void setCost(int cost) {
+        this.cost = cost;
     }
 }
