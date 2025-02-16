@@ -1,7 +1,14 @@
 SET search_path TO spring_app_tolya;
 
+truncate spring_app_tolya.users cascade;
+truncate spring_app_tolya.cars cascade;
+
 CREATE SEQUENCE IF NOT EXISTS car_id_seq START 1 INCREMENT 1;
+ALTER SEQUENCE car_id_seq RESTART WITH 1;
+
 CREATE SEQUENCE IF NOT EXISTS user_id_seq START 1 INCREMENT 1;
+ALTER SEQUENCE user_id_seq RESTART WITH 1;
+
 
 INSERT INTO cars (car_id, model, series, cost)
 VALUES (nextval('car_id_seq'), 'BMW X7', 2023, 2500000);

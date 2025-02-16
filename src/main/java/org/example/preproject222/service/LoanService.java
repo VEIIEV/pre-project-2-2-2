@@ -1,10 +1,10 @@
 package org.example.preproject222.service;
 
 import jakarta.persistence.EntityNotFoundException;
+import org.example.incomespringbootstarter.integration.IncomeClient;
 import org.example.preproject222.config.LoanProperties;
 import org.example.preproject222.dao.UserDao;
 import org.example.preproject222.entity.User;
-import org.example.preproject222.integration.IncomeClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

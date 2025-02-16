@@ -1,16 +1,15 @@
-package org.example.preproject222.integration;
+package org.example.incomespringbootstarter.integration;
 
 
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
-@Component
 public class IncomeClient {
 
 
@@ -33,9 +32,18 @@ public class IncomeClient {
     }
 
     public IncomeDTO getUserIncome(Long id) {
-        return getAllUsersIncome().stream().filter(incomeDTO -> incomeDTO.getId().equals(id)).findFirst().orElse(new IncomeDTO(-1L, 0));
-
+        return getAllUsersIncome()
+                .stream()
+                .filter(incomeDTO -> incomeDTO
+                        .getId()
+                        .equals(id))
+                .findFirst()
+                .orElse(new IncomeDTO(-1L, 0));
     }
 
+    @PostConstruct
+    public void init() {
+        System.out.println("IncomeClient init...");
+    }
 
 }

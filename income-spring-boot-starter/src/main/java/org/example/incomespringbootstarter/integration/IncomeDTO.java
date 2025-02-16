@@ -1,4 +1,4 @@
-package org.example.preproject222.integration;
+package org.example.incomespringbootstarter.integration;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

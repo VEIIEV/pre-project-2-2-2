@@ -1,3 +1,5 @@
+
+
 spring:
   application:
     name: pre-project-2-2-2
@@ -25,7 +27,7 @@ spring:
           min_size: 5
           max_size: 20
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
     defer-datasource-initialization: true
 
   thymeleaf:
@@ -41,3 +43,5 @@ cars:
 loan:
   min-revenue: 40000
   min-car-value: 1000000
+
+debug: true
