@@ -3,6 +3,7 @@ package org.example.incomespringbootstarter.integration;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +13,8 @@ import java.util.List;
 
 public class IncomeClient {
 
-
+    @Value("${income.url}")
+    private String URL;
     private final RestTemplate restTemplate;
 
     @Autowired
@@ -21,9 +23,9 @@ public class IncomeClient {
     }
 
     public List<IncomeDTO> getAllUsersIncome() {
-        String url = "https://66055cd12ca9478ea1801f2e.mockapi.io/api/users/income";
+
         ResponseEntity<List<IncomeDTO>> response = restTemplate.
-                exchange(url,
+                exchange(URL,
                         HttpMethod.GET,
                         null,
                         new ParameterizedTypeReference<>() {

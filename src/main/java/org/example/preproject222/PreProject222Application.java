@@ -17,6 +17,6 @@ public class PreProject222Application {
         SpringApplication springApplication = new SpringApplication(PreProject222Application.class);
         springApplication.setBannerMode(Banner.Mode.OFF);
         ConfigurableApplicationContext context = springApplication.run(args);
-        System.out.println(Arrays.toString(context.getBeanDefinitionNames()));
+//        System.out.println(Arrays.toString(context.getBeanDefinitionNames()));
     }
 }
